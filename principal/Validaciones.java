@@ -3,11 +3,6 @@ package principal;
 import excepciones.DatosInvalidosException;
 import java.util.regex.Pattern;
 
-/**
- * Centraliza las reglas de validación de datos de entrada.
- * Separada del resto de la lógica para respetar el principio
- * de responsabilidad única.
- */
 public class Validaciones {
 
     private static final int LONGITUD_MINIMA_PASSWORD = 6;

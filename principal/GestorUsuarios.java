@@ -7,14 +7,7 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- * Encapsula toda la lógica de negocio del sistema de usuarios:
- * alta, búsqueda, login y listado. No conoce nada de consola ni
- * de menús (eso es responsabilidad de SistemaUsuarios).
- *
- * Implementado como Singleton porque solo debe existir una
- * instancia del "padrón" de usuarios en toda la aplicación.
- */
+
 public class GestorUsuarios {
 
     private static GestorUsuarios instancia;
@@ -88,9 +81,6 @@ public class GestorUsuarios {
         return usuariosPorEmail.values();
     }
 
-    // Email duplicado se trata como un dato inválido: no amerita
-    // una tercera excepción propia, ya que conceptualmente es un
-    // problema de los datos ingresados.
     private void verificarEmailDisponible(String email) throws DatosInvalidosException {
         if (usuariosPorEmail.containsKey(email)) {
             throw new DatosInvalidosException("Ya existe un usuario registrado con el email: " + email);
