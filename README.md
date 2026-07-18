@@ -102,6 +102,7 @@ classDiagram
     GestorUsuarios ..> UsuarioNoEncontradoException : lanza
 ```
 
+Datos de prueba:
 
 | Admin | yaniscorrea@gmail.com | 12345 |
 | Admin | leonardoperez@gmail.com | 12345 |
